@@ -2,11 +2,17 @@
 
 Este script toma cada superíndice, le resta 36 y lo convierte a la notación correspondiente en superíndice.
 
-Explicación:
-superindice_map: Mapea los números 0-9 a sus respectivos superíndices.
-numero_a_superindice: Convierte un número entero a su representación en superíndice.
-convertir_superindices: Busca todos los superíndices en el texto. Si un superíndice es 37, se convierte en 2, si es 38, se convierte en 3, etc. Esto se logra restando 36 al número original del superíndice.
-procesar_archivo: Lee el archivo de entrada, convierte los superíndices según lo especificado y guarda el resultado en un archivo de salida.
+Explicación del Script
+Diccionarios:
+
+superindices_unicode para mapear los caracteres superíndices Unicode a números enteros.
+numeros_a_superindices para convertir números enteros de vuelta a superíndices Unicode.
+Funciones:
+
+convertir_a_numero: Convierte una cadena de superíndices Unicode a un número entero.
+convertir_a_superindice: Convierte un número entero a una cadena de superíndices Unicode.
+modificar_superindices: Busca superíndices en el texto y resta 36 de su valor.
+Expresión Regular: Se utiliza re.compile(r'[⁰¹²³⁴⁵⁶⁷⁸⁹]+') para identificar secuencias de superíndices Unicode.
 
 ## Uso
 
